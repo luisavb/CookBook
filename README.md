@@ -1,16 +1,22 @@
-# 🚧 README em construção 🚧
+# CookBook - Recipe App
 
-<!-- Olá, Tryber!
+# Contexto
+Este projeto trata-se de um app de receitas, focado em mobile (360x640), utilizando das ferramentas React Hooks e Context API, nele é possível ver, buscar, filtrar, favoritar e acompanhar o progresso de preparação de receitas e drinks. 
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+## Equipe
+Trabalho feito em grupo por: @luisavb, @amandapccs, @hsbicalho, @flachh, @RicardoOpus
 
-É essencial que você preencha esse documento por conta própria, ok?
+## Técnologias usadas
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+> Desenvolvido usando: React, Context API, React Hooks, CSS3, HTML5, ES6
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+## Instalando Dependências
 
--->
+```bash
+cd src/
+npm install
+``` 
+## Executando aplicação
+  ```
+    cd src/ && npm start
+  ```
