@@ -20,3 +20,8 @@ npm install
   ```
     cd src/ && npm start
   ```
+## Breve parte da aplicação em execução
+  
+  <img src="https://user-images.githubusercontent.com/88630222/177211636-10ae96d8-99ec-447f-963a-0d6b2db4c0ab.gif" alt="drawing" width="200"/>
+
+
