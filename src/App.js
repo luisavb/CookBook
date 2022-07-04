@@ -23,7 +23,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={ Login } />
+          <Route exact path="/CookBook" component={ Login } />
           <Route exact path="/profile" component={ Profile } />
           <Route exact path="/foods" component={ FoodPage } />
           <Route exact path="/drinks" component={ DrinkPage } />

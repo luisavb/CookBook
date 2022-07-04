@@ -140,7 +140,7 @@ export default function Profile() {
               name="Favorite Recipes"
             />
           </Link>
-          <Link to="/">
+          <Link to="/CookBook">
             <Button
               onClick={ clearStorage }
               datatestid="profile-logout-btn"
