@@ -1,6 +1,6 @@
 # CookBook - Recipe App
 
-# Contexto
+## Contexto
 Este projeto trata-se de um app de receitas, focado em mobile (360x640), utilizando das ferramentas React Hooks e Context API, nele é possível ver, buscar, filtrar, favoritar e acompanhar o progresso de preparação de receitas e drinks. 
 
 Link do GitHubPages - https://luisavb.github.io/CookBook/
