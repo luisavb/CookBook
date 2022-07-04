@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/cookbook/static/css/main.955a72c5.css",
-    "main.js": "/cookbook/static/js/main.a086562b.js",
-    "static/media/backGroundImg.jpeg": "/cookbook/static/media/backGroundImg.749065bd991b7655b278.jpeg",
-    "static/media/CookBook.png": "/cookbook/static/media/CookBook.6ed20442fdd6c7c7497a.png",
-    "static/media/TvImg.png": "/cookbook/static/media/TvImg.dd847498f1b37db40f99.png",
-    "static/media/pizza.png": "/cookbook/static/media/pizza.4636bcc644a20e5c9b15.png",
-    "static/media/espaguete.png": "/cookbook/static/media/espaguete.51d7a5b460027fd56ca4.png",
-    "static/media/nachos.png": "/cookbook/static/media/nachos.99490f7a10beac41abe7.png",
-    "static/media/empregos.png": "/cookbook/static/media/empregos.b79091c344ee84c40d31.png",
-    "static/media/cry.png": "/cookbook/static/media/cry.46efc2b796fb6e4f450e.png",
-    "static/media/exploreIcon.svg": "/cookbook/static/media/exploreIcon.076346236f69318885d7f53b65f0e4c7.svg",
-    "static/media/mealIcon.svg": "/cookbook/static/media/mealIcon.40029e7f1422ba5a1bf1c10fa4f59030.svg",
-    "static/media/shareIcon.svg": "/cookbook/static/media/shareIcon.87def1bd1dff9af9263f046c3b9bd31a.svg",
-    "static/media/profileIcon.svg": "/cookbook/static/media/profileIcon.44eb3608f431845fe2fc2d2a23d758ae.svg",
-    "static/media/whiteHeartIcon.svg": "/cookbook/static/media/whiteHeartIcon.2b822118952dc5140129c6349fcd0472.svg",
-    "static/media/searchIcon.svg": "/cookbook/static/media/searchIcon.7353564d025de989f86f66ecb0202a04.svg",
-    "static/media/blackHeartIcon.svg": "/cookbook/static/media/blackHeartIcon.083cb006913d197c95857ebfa2161db7.svg",
-    "static/media/drinkIcon.svg": "/cookbook/static/media/drinkIcon.efc0d3c156e5da73e44a826c8d67b142.svg",
-    "index.html": "/cookbook/index.html",
-    "main.955a72c5.css.map": "/cookbook/static/css/main.955a72c5.css.map",
-    "main.a086562b.js.map": "/cookbook/static/js/main.a086562b.js.map"
+    "main.css": "/CookBook/static/css/main.a296078a.css",
+    "main.js": "/CookBook/static/js/main.cd730084.js",
+    "static/media/backGroundImg.jpeg": "/CookBook/static/media/backGroundImg.749065bd991b7655b278.jpeg",
+    "static/media/CookBook.png": "/CookBook/static/media/CookBook.6ed20442fdd6c7c7497a.png",
+    "static/media/TvImg.png": "/CookBook/static/media/TvImg.dd847498f1b37db40f99.png",
+    "static/media/pizza.png": "/CookBook/static/media/pizza.4636bcc644a20e5c9b15.png",
+    "static/media/espaguete.png": "/CookBook/static/media/espaguete.51d7a5b460027fd56ca4.png",
+    "static/media/nachos.png": "/CookBook/static/media/nachos.99490f7a10beac41abe7.png",
+    "static/media/empregos.png": "/CookBook/static/media/empregos.b79091c344ee84c40d31.png",
+    "static/media/cry.png": "/CookBook/static/media/cry.46efc2b796fb6e4f450e.png",
+    "static/media/exploreIcon.svg": "/CookBook/static/media/exploreIcon.076346236f69318885d7f53b65f0e4c7.svg",
+    "static/media/mealIcon.svg": "/CookBook/static/media/mealIcon.40029e7f1422ba5a1bf1c10fa4f59030.svg",
+    "static/media/shareIcon.svg": "/CookBook/static/media/shareIcon.87def1bd1dff9af9263f046c3b9bd31a.svg",
+    "static/media/profileIcon.svg": "/CookBook/static/media/profileIcon.44eb3608f431845fe2fc2d2a23d758ae.svg",
+    "static/media/whiteHeartIcon.svg": "/CookBook/static/media/whiteHeartIcon.2b822118952dc5140129c6349fcd0472.svg",
+    "static/media/searchIcon.svg": "/CookBook/static/media/searchIcon.7353564d025de989f86f66ecb0202a04.svg",
+    "static/media/blackHeartIcon.svg": "/CookBook/static/media/blackHeartIcon.083cb006913d197c95857ebfa2161db7.svg",
+    "static/media/drinkIcon.svg": "/CookBook/static/media/drinkIcon.efc0d3c156e5da73e44a826c8d67b142.svg",
+    "index.html": "/CookBook/index.html",
+    "main.a296078a.css.map": "/CookBook/static/css/main.a296078a.css.map",
+    "main.cd730084.js.map": "/CookBook/static/js/main.cd730084.js.map"
   },
   "entrypoints": [
-    "static/css/main.955a72c5.css",
-    "static/js/main.a086562b.js"
+    "static/css/main.a296078a.css",
+    "static/js/main.cd730084.js"
   ]
 }
