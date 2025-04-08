@@ -4,6 +4,8 @@ import IngredientsCard from '../../components/IngredientsCard/IngredientsCard';
 import Card from '../../components/RecomendationCard/RecomendationCard';
 import Button from '../../components/ButtonStartRecipe/ButtonStartRecipe';
 import ShareAndFav from '../../components/ButtonsShareAndFav';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 import {
   RecomendationConteiner,
@@ -39,11 +41,13 @@ export default function FoodDetails() {
   }, []);
 
   const [recommended, setRecommended] = useState([]);
+  console.log(recommended);
   const MAX_RECOMMENDATION = 6;
 
   useEffect(() => {
     const fetchApi = async () => {
-      const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
+      // eslint-disable-next-line
+      const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a');
       const resolve = await response.json();
       setRecommended(resolve.drinks);
     };
@@ -51,73 +55,77 @@ export default function FoodDetails() {
   }, []);
 
   return (
-    <MainConteiner>
-      <FoodTitle data-testid="recipe-title">
-        { foodDetails.strMeal }
-      </FoodTitle>
-      <FoodImg
-        data-testid="recipe-photo"
-        width="360"
-        height="200"
-        src={ foodDetails.strMealThumb }
-        alt={ `${foodDetails.strMeal}` }
-      />
-      <ShareAndFavContainer>
-        <ShareAndFav
+    <div>
+      <Header title="Food" />
+      <MainConteiner>
+        <FoodTitle data-testid="recipe-title">
+          { foodDetails.strMeal }
+        </FoodTitle>
+        <FoodImg
+          data-testid="recipe-photo"
+          width="360"
+          height="200"
+          src={ foodDetails.strMealThumb }
+          alt={ `${foodDetails.strMeal}` }
+        />
+        <ShareAndFavContainer>
+          <ShareAndFav
+            id={ id }
+            idType={ foodDetails.idMeal }
+            image={ foodDetails.strMealThumb }
+            category={ foodDetails.strCategory }
+            area={ foodDetails.strArea }
+            name={ foodDetails.strMeal }
+            type="food"
+            page="foods"
+          />
+        </ShareAndFavContainer>
+        <Title>Ingredients</Title>
+        <IngredientsCard data={ foodDetails } />
+        <Title>Instructions</Title>
+        <InstructionsContainer data-testid="instructions">
+          <FoodInstructions>
+            { foodDetails.strInstructions }
+          </FoodInstructions>
+        </InstructionsContainer>
+        <Title>Video</Title>
+        <ConteinerVideoRecipe>
+          <Video
+            data-testid="video"
+            width="230"
+            height="155"
+            src={ `https://www.youtube.com/embed/${YTCode}` }
+            title={ foodDetails.strMeal }
+            frameBorder="0"
+            allowFullScreen
+          />
+        </ConteinerVideoRecipe>
+        <Title>Recommended</Title>
+        <RecomendationConteiner>
+          {recommended.slice(0, MAX_RECOMMENDATION)
+            .map(({ idDrink, strDrink, strDrinkThumb, strAlcoholic }, index) => (
+              <Card
+                key={ index }
+                src={ strDrinkThumb }
+                name={ strDrink }
+                testDiv={ `${index}-recomendation-card` }
+                testTitle={ `${index}-recomendation-title` }
+                testImg={ `${index}-card-img` }
+                id={ idDrink }
+                path="drinks"
+                category={ strAlcoholic }
+              />
+            ))}
+        </RecomendationConteiner>
+
+        <Button
           id={ id }
-          idType={ foodDetails.idMeal }
-          image={ foodDetails.strMealThumb }
-          category={ foodDetails.strCategory }
-          area={ foodDetails.strArea }
-          name={ foodDetails.strMeal }
-          type="food"
+          type="meals"
           page="foods"
         />
-      </ShareAndFavContainer>
-      <Title>Ingredients</Title>
-      <IngredientsCard data={ foodDetails } />
-      <Title>Instructions</Title>
-      <InstructionsContainer data-testid="instructions">
-        <FoodInstructions>
-          { foodDetails.strInstructions }
-        </FoodInstructions>
-      </InstructionsContainer>
-      <Title>Video</Title>
-      <ConteinerVideoRecipe>
-        <Video
-          data-testid="video"
-          width="230"
-          height="155"
-          src={ `https://www.youtube.com/embed/${YTCode}` }
-          title={ foodDetails.strMeal }
-          frameBorder="0"
-          allowFullScreen
-        />
-      </ConteinerVideoRecipe>
-      <Title>Recommended</Title>
-      <RecomendationConteiner>
-        {recommended.slice(0, MAX_RECOMMENDATION)
-          .map(({ idDrink, strDrink, strDrinkThumb, strAlcoholic }, index) => (
-            <Card
-              key={ index }
-              src={ strDrinkThumb }
-              name={ strDrink }
-              testDiv={ `${index}-recomendation-card` }
-              testTitle={ `${index}-recomendation-title` }
-              testImg={ `${index}-card-img` }
-              id={ idDrink }
-              path="drinks"
-              category={ strAlcoholic }
-            />
-          ))}
-      </RecomendationConteiner>
 
-      <Button
-        id={ id }
-        type="meals"
-        page="foods"
-      />
-
-    </MainConteiner>
+      </MainConteiner>
+      <Footer />
+    </div>
   );
 }

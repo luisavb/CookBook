@@ -4,7 +4,7 @@ export async function fetchApi() {
   return resolve;
 }
 export async function fetchApiDrinks() {
-  const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=');
+  const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a');
   const resolve = await response.json();
   return resolve;
 }

@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import IngredientsCard from '../../components/IngredientsCard';
 import Card from '../../components/RecomendationCard';
 import Button from '../../components/ButtonStartRecipe';
+import Header from '../../components/Header';
+// import Footer from '../../components/Footer';
 import ShareAndFav from '../../components/ButtonsShareAndFav';
 import {
   RecomendationConteiner,
@@ -46,70 +48,73 @@ export default function DrinksDetails() {
   const MAX_RECOMMENDATION = 6;
 
   return (
-    <MainConteiner>
-      <FoodTitle data-testid="recipe-title">
-        { drinksDetails.strDrink }
-      </FoodTitle>
+    <div>
+      <Header title="Drink" />
+      <MainConteiner>
+        <FoodTitle data-testid="recipe-title">
+          { drinksDetails.strDrink }
+        </FoodTitle>
 
-      <Title data-testid="recipe-category">
-        {' '}
-        { drinksDetails.strAlcoholic }
-      </Title>
+        <Title data-testid="recipe-category">
+          {' '}
+          { drinksDetails.strAlcoholic }
+        </Title>
 
-      <FoodImg
-        data-testid="recipe-photo"
-        width="360"
-        height="200"
-        src={ drinksDetails.strDrinkThumb }
-        alt={ `${drinksDetails.strDrink}` }
-      />
+        <FoodImg
+          data-testid="recipe-photo"
+          width="360"
+          height="200"
+          src={ drinksDetails.strDrinkThumb }
+          alt={ `${drinksDetails.strDrink}` }
+        />
 
-      <ShareAndFavContainer>
-        <ShareAndFav
+        <ShareAndFavContainer>
+          <ShareAndFav
+            id={ id }
+            idType={ drinksDetails.idDrink }
+            image={ drinksDetails.strDrinkThumb }
+            category={ drinksDetails.strCategory }
+            area={ drinksDetails.strArea }
+            alcoholic={ drinksDetails.strAlcoholic }
+            name={ drinksDetails.strDrink }
+            type="drink"
+            page="drinks"
+          />
+        </ShareAndFavContainer>
+
+        <Title>Ingredients</Title>
+
+        <IngredientsCard data={ drinksDetails } />
+
+        <InstructionsContainer>
+          <FoodInstructions data-testid="instructions">
+            { drinksDetails.strInstructions }
+          </FoodInstructions>
+        </InstructionsContainer>
+        <Title>Recommended</Title>
+        <RecomendationConteiner>
+          {recommended.slice(0, MAX_RECOMMENDATION)
+            .map(({ idMeal, strMeal, strMealThumb, strCategory }, index) => (
+              <Card
+                key={ index }
+                src={ strMealThumb }
+                name={ strMeal }
+                testDiv={ `${index}-recomendation-card` }
+                testTitle={ `${index}-recomendation-title` }
+                testImg={ `${index}-card-img` }
+                id={ idMeal }
+                path="foods"
+                category={ strCategory }
+              />
+            ))}
+        </RecomendationConteiner>
+        <Button
           id={ id }
-          idType={ drinksDetails.idDrink }
-          image={ drinksDetails.strDrinkThumb }
-          category={ drinksDetails.strCategory }
-          area={ drinksDetails.strArea }
-          alcoholic={ drinksDetails.strAlcoholic }
-          name={ drinksDetails.strDrink }
-          type="drink"
+          type="cocktails"
           page="drinks"
         />
-      </ShareAndFavContainer>
-
-      <Title>Ingredients</Title>
-
-      <IngredientsCard data={ drinksDetails } />
-
-      <InstructionsContainer>
-        <FoodInstructions data-testid="instructions">
-          { drinksDetails.strInstructions }
-        </FoodInstructions>
-      </InstructionsContainer>
-      <Title>Recommended</Title>
-      <RecomendationConteiner>
-        {recommended.slice(0, MAX_RECOMMENDATION)
-          .map(({ idMeal, strMeal, strMealThumb, strCategory }, index) => (
-            <Card
-              key={ index }
-              src={ strMealThumb }
-              name={ strMeal }
-              testDiv={ `${index}-recomendation-card` }
-              testTitle={ `${index}-recomendation-title` }
-              testImg={ `${index}-card-img` }
-              id={ idMeal }
-              path="foods"
-              category={ strCategory }
-            />
-          ))}
-      </RecomendationConteiner>
-      <Button
-        id={ id }
-        type="cocktails"
-        page="drinks"
-      />
-    </MainConteiner>
-
+      </MainConteiner>
+      {/* <Footer /> */}
+    </div>
   );
 }
